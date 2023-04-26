@@ -1,6 +1,7 @@
 const express=require('express');
 const app=express()
 const port=process.env.PORT||3000
+const host='35.164.95.156'
 const path=require('path');
 const hbs=require('hbs');
 
@@ -35,7 +36,7 @@ app.get("*",(req,res)=>
 
 
 
-app.listen(port,()=>
+app.listen(port,host,()=>
 {
     console.log('server connected successfully');
 })
